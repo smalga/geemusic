@@ -11,7 +11,7 @@ class GMusicWrapper(object):
     def __init__(self, device_id, logger=None):
         self._api = Mobileclient()
         self.logger = logger
-        success = self._api.oauth_login(device_id)
+        success = self._api.oauth_login(device_id, "mobileclient.cred")
 
         if not success:
             raise Exception("Unsuccessful login. Aborting!")
